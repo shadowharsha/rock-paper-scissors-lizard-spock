@@ -12,6 +12,13 @@ function updateScore(score){
     scoreValue.innerText = score;
 }
 
+function mobileUpdateScore(score){
+    if(window.innerWidth <= 600){
+        const mscore = document.querySelector(".mobile-score span");
+        mscore.innerText = score;
+    }
+}
+
 // images for player and computer
 const playerOption = document.querySelector(".player-option");
 const computerOption = document.querySelector(".computer-option");
@@ -106,6 +113,7 @@ function gameResult(){
         winner.innerText = "Player Won";
         score++;
         updateScore(score);
+        mobileUpdateScore(score);
         if(score > 1){
             letsCelebrate();
             winner.innerText = "you won aginst computer";
@@ -115,6 +123,7 @@ function gameResult(){
         winner.innerText = "computer Won";
         score--;
         updateScore(score);
+        mobileUpdateScore(score);
     }
 
     // unoptimized code

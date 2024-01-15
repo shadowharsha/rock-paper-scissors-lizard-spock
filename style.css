@@ -142,6 +142,10 @@ nav div:active{
     height: auto;
 }
 
+.mobile-score{
+    display: none;
+}
+
 /* result */
 .result{
     transform: translateY(-3.5rem);
@@ -150,5 +154,32 @@ nav div:active{
     font-weight: 700;
 }
 
+/* for mobile */
+@media only screen and (max-width:600px){
+    nav{
+        flex-direction: row;
+        height: 10dvh;
+        width: 100dvw;
+    }
+
+    .main-game{
+        flex-direction: column;
+        margin-top: 10dvh;
+    }
+
+    .score-board{
+        display: none;
+    }
+
+    .mobile-score{
+        display: block;
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.8rem;
+        font-family:'Courier New', Courier, monospace ;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+    }
 
 
+}
